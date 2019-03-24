@@ -24,7 +24,7 @@ public class SignInTest {
 	
 	@BeforeClass
 	@Parameters("browser")
-	public void setup(String browserName) throws Exception {
+	public void setup(@Optional("firefox") String browserName) throws Exception {
 		DriverFactory df = new DriverFactory();
 		driver = df.getBrowser(browserName);
 		
