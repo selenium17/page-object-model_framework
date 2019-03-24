@@ -28,7 +28,6 @@ public class SignInTest {
 		DriverFactory df = new DriverFactory();
 		driver = df.getBrowser(browserName);
 		
-		//getting test name dynamically
 		String testName = getClass().getSimpleName();
 		report = new ReportingUtil(driver, testName);
 	}
