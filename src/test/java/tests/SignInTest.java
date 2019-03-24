@@ -26,8 +26,11 @@ public class SignInTest {
 	@Parameters("browser")
 	public void setup(String browserName) throws Exception {
 		DriverFactory df = new DriverFactory();
-		driver = df.getBrowser(browserName);		
-		report = new ReportingUtil(driver, getClass().getSimpleName());
+		driver = df.getBrowser(browserName);
+		
+		//getting test name dynamically
+		String testName = getClass().getSimpleName();
+		report = new ReportingUtil(driver, testName);
 	}
 	
 	@DataProvider
